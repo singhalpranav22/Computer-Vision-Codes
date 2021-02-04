@@ -1,26 +1,31 @@
-import cv2
-print('Package Imported')
-
-# img = cv2.imread("res/img1.jpeg")
-# cv2.imshow("output",img)
+# #Read Image
+# import cv2
+# # LOAD AN IMAGE USING 'IMREAD'
+# img = cv2.imread("Resources/img1.jpeg")
+# # DISPLAY
+# cv2.imshow("output-name",img)
 # cv2.waitKey(0)
+# # Read Video
+# import cv2
+# frameWidth = 640
+# frameHeight = 480
+# cap = cv2.VideoCapture("Resources/vid2.mp4")
+# while True:
+#     success, img = cap.read()
+#     img = cv2.resize(img, (frameWidth, frameHeight))
+#     cv2.imshow("Result", img)
+#     if cv2.waitKey(1) and 0xFF == ord('q'):
+#          break
+# Read Webcam
+import cv2
+frameWidth = 640
+frameHeight = 480
 cap = cv2.VideoCapture(1)
-cap.set(3,640)
-cap.set(4,480)
+cap.set(3, frameWidth)
+cap.set(4, frameHeight)
+cap.set(10,150)
 while True:
-    success,img = cap.read()
-    cv2.imshow("video",img)
-    cv2.waitKey(1)
-    if 0xFF == ord('q'):
+    success, img = cap.read()
+    cv2.imshow("Result", img)
+    if cv2.waitKey(1) and 0xFF == ord('q'):
         break
-
-
-
-
-
-
-
-
-
-
-
