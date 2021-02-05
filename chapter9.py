@@ -7,7 +7,6 @@ frameHeight = 640
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
 cap.set(10,150)
-
 while True:
     success, img = cap.read()
     print(success)
